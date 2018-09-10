@@ -1,3 +1,8 @@
+var x = 50
+var y = 50
+var d = 150
+var s = 80
+
 function setup() {
 createCanvas(800, 800);
 background(204);
@@ -5,24 +10,11 @@ background(204);
 
 function draw() {
   // put drawing code here
-  fill(0)
-  beginShape();
-  vertex(50,120)
-  vertex(50,190);
-  vertex(20,70);
-  vertex(80,20);
-  vertex(210,60);
-  vertex(160,80);
-  vertex(200,90);
-  vertex(140,100);
-  vertex(130,120);
-  vertex(200,200);
-  vertex(70,150);
-  vertex(100,300);
 
-  endShape();
-  fill(255,0,0);
-  ellipse(155,60,8,8);
+  beginShape();
+  rect(x,y,s, s);
+  rect(x+d,y, 2*s,2*s);
+  rect(x+2*d+s,y,3*s, 3*s);
 
 
 }
