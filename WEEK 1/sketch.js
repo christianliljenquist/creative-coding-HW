@@ -1,10 +1,7 @@
-var x = 20
-var y = 20
-var d = 100
-var s = 300
+var d=10
 
 function setup() {
-createCanvas(480, 120);
+createCanvas(800, 800);
 strokeWeight(2);
 
 }
@@ -12,10 +9,8 @@ strokeWeight(2);
 function draw() {
   // put drawing code here
   background(204);
-  for(var i=20; i<400; i+=20){
-    line(i,0, i+i/2, 80)
-    fill(255,0,0);
-    ellipse(i+i/2, 80, 20,20);
+  for(var i=1; i<21; i++){
+    ellipse(x,y,i*d, i*d);
 
   }
 }
