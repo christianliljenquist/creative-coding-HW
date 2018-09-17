@@ -25,4 +25,5 @@ function draw (){
   x+x=100;
   rect(x,y+h*7,100,h);
   x+x=100;
+  rect(x,y+h*8.100,h);
 }
