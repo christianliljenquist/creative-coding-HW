@@ -10,7 +10,7 @@ function draw (){
   background(204);
   x=20;
   rect(x,y,100,h);
-  x=x+100;
+  x+x=100;
   rect(x,y+h,100,h);
   x+x+100;
   rect(x,y+h*2,100,h);
