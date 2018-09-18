@@ -1,37 +1,15 @@
-var x = 25;
-var h = 20;
-var y = 25;
-
 function setup(){
-  createCanvas(1200,400);
+  createCanvas(480,120);
+  fill(255);
+  stroke(102);
 }
 
-function draw (){
-  background(204);
-  x=20;
-  rect(x,y,100,h);
-  x=x+100;
-  rect(x,y+h,100,h);
-  x=x+100;
-  rect(x,y+h*2,100,h);
-  x=x+100;
-  rect(x,y+h*3,100,h);
-  x=x+100;
-  rect(x,y+h*4,100,h);
-  x=x+100;
-  rect(x,y+h*5,100,h);
-  x=x+100;
-  rect(x,y+h*6,100,h);
-  x=x+100;
-  rect(x,y+h*7,100,h);
-  x=x+100;
-  rect(x,y+h*8.100,h);
-  x=x+100;
-  rect(x,y+h*9,100,h);
-  x=x+100;
-  rect(x,y+h*10,100,h);
-  x=x+100;
-  rect(x,y+h*11,100,h);
-  x=x+100;
-  rect(x,y+h*12,100,h);
+function draw(){
+  background(0);
+  for(var y=20; y<= height-20; y+=10){
+    for(var x=20; x<=width-20; x+=10){
+      ellipse(x,y,4,4);
+      line(x,y,240,60);
+    }
+  }
 }
