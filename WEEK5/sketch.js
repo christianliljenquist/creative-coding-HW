@@ -4,14 +4,14 @@ function setup(){
 }
 
 function draw(){
-  if(){
+  if(mouseYIsPressed){
     fill(255,0,0);
   } else {
     fill(255);
   }
   rect(90,30,60,60);
 
-  if(){
+  if(mouseXIsPressed){
     fill(0,255,0);
   } else{
     fill(255);
