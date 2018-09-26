@@ -1,30 +1,39 @@
-var x=240
-
+var x=60
+var y=80
 
 
 
 function setup(){
   createCanvas(500,500);
 
-  background(204);
+
 }
 
 function draw(){
-
-if (keyIsPressed){
+background(0);
+fill(255);
+if(keyIsPressed){
   if(keyCode==LEFT_ARROW){
     x=x-5;
 
   }
-  if (keyCode==RIGHT_ARROW){
+
+ if(keyCode==RIGHT_ARROW){
     x=x+5;
   }
+
+ if(keyCode==UP_ARROW){
+   y=y+5
+ }
+if(keyCode==DOWN_ARROW){
+   y=y-5
+ }
 }
 
-  fill(255,0,0);
-  //when the key is pressed the 3rd value has to be changed
-  rect(0,0,x,height);
-  fill(0,0,255);
-  //when the key is pressed, the 1st and 3rd value have to be changed
-  rect(x,0,width-x,height);
+rect(x,y,40,40);
+if(keyCode=='C'){
+
+  stroke(255,0,0);
+  line(x,y,x+40,y);
+}
 }
