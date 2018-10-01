@@ -1,7 +1,9 @@
-var img;
+var giraffe;
+var panda;
 
 function preload(){
-  img=loadImage('giraffe.JPG');
+  giraffe=loadImage('giraffe.JPG');
+  panda=loadImage('panda.jpg');
 }
 
 function setup(){
@@ -10,5 +12,7 @@ function setup(){
 }
 
 function draw(){
-  image(img,0,0);
+  image(giraffe,0,0,240,120);
+  image(panda,240,100,100)
+
 }
