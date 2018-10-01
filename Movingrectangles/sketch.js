@@ -1,5 +1,5 @@
-var x=500
-var y=500
+var x=300
+var y=300
 
 
 
@@ -26,5 +26,5 @@ if(keyIsPressed){
   stroke(255,255,0);
 }
 }
-rect(x,y,100,100);
+rect(x,y,50,50);
 }
