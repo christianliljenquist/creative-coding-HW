@@ -8,7 +8,6 @@ function preload(){
 
 function setup(){
   createCanvas(480,240);
-
 }
 
 function draw(){
