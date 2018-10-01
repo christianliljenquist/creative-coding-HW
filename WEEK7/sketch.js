@@ -1,18 +1,19 @@
-var giraffe;
-var panda;
+var bgImg;
+var houseImg
 
 function preload(){
-  giraffe=loadImage('giraffe.JPG');
-  panda=loadImage('panda.jpg');
+  bgImg=loadImage('landscape.jpg');
+  houseImg=loadImage('house.png');
 }
 
 function setup(){
   createCanvas(480,240);
+  background(204);
 }
 
 function draw(){
-  backgorund(240);
-  image(giraffe,mouseX-120,mouseY-60, 240,120);
-  image(panda,240,120,240,120)
+  image(bgImg,0,0);
+  tint(255,20);
+  image(houseImg,20,100,400,200);
 
 }
