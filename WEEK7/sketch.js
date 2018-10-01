@@ -8,11 +8,12 @@ function preload(){
 
 function setup(){
   createCanvas(480,240);
-  background(204);
+
 }
 
 function draw(){
-  image(giraffe,0,0,240,120);
-  image(panda,240,100,100)
+  backgorund(240);
+  image(giraffe,mouseX-120,mouseY-60, 240,120);
+  image(panda,240,120,240,120)
 
 }
