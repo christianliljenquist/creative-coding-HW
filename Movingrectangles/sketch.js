@@ -1,5 +1,5 @@
-var x=60
-var y=80
+var x=500
+var y=500
 
 
 
@@ -15,25 +15,16 @@ fill(255);
 if(keyIsPressed){
   if(keyCode==LEFT_ARROW){
     x=x-5;
-
-  }
-
- if(keyCode==RIGHT_ARROW){
-    x=x+5;
-  }
-
- if(keyCode==UP_ARROW){
-   y=y+5
- }
-if(keyCode==DOWN_ARROW){
-   y=y-5
- }
+} else if(keyCode==RIGHT_ARROW){
+  x=x+5;
+} else if(keyCode==UP_ARROW){
+  y=y-5;
+} else if(keyCode==DOWN_ARROW){
+  y=y+5;
+} else if(key== 'd'){
+  line(x+10,y,width,y);
+  stroke(255,255,0);
 }
-
-rect(x,y,40,40);
-if(keyCode=='C'){
-
-  stroke(255,0,0);
-  line(x,y,x+40,y);
 }
+rect(x,y,100,100);
 }
