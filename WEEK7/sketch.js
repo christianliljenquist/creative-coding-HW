@@ -1,7 +1,7 @@
 var img;
 
 function preload(){
-  img=loadImage('giraffe.jpg');
+  img=loadImage('giraffe.JPG');
 }
 
 function setup(){
