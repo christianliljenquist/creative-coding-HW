@@ -1,37 +1,16 @@
-var x = 25;
-var h = 20;
-var y = 25;
+var img;
+var offset = 0;
+var easing = 0.05;
 
-function setup(){
-  createCanvas(1200,400);
+function setup() {
+  createCanvas(720, 400);
+  img = loadImage("assets/moonwalk.jpg");  // Load an image into the program
 }
 
-function draw (){
-  background(204);
-  x=20;
-  rect(x,y,100,h);
-  x=x+100;
-  rect(x,y+h,100,h);
-  x=x+100;
-  rect(x,y+h*2,100,h);
-  x=x+100;
-  rect(x,y+h*3,100,h);
-  x=x+100;
-  rect(x,y+h*4,100,h);
-  x=x+100;
-  rect(x,y+h*5,100,h);
-  x=x+100;
-  rect(x,y+h*6,100,h);
-  x=x+100;
-  rect(x,y+h*7,100,h);
-  x=x+100;
-  rect(x,y+h*8.100,h);
-  x=x+100;
-  rect(x,y+h*9,100,h);
-  x=x+100;
-  rect(x,y+h*10,100,h);
-  x=x+100;
-  rect(x,y+h*11,100,h);
-  x=x+100;
-  rect(x,y+h*12,100,h);
+function draw() {
+  image(img, 0, 0);  // Display at full opacity
+  var dx = (mouseX-img.width/2) - offset;
+  offset += dx * easing;
+  tint(255, 127);  // Display at half opacity
+  image(img, offset, 0);
 }
