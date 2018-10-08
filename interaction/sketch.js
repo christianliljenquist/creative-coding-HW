@@ -2,7 +2,7 @@ var radius=40;
 var x= 110;
 var speed=2.3;
 var direction=1;
-var img;
+
 
 
 function setup(){
@@ -11,7 +11,6 @@ function setup(){
 }
 
 function draw(){
-  var img='particles.jpg';
   background(0);
 
 
