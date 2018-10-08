@@ -1,16 +1,31 @@
+var radius=40;
+var x= 110;
+var speed=2.3;
+var direction=1;
 var img;
-var offset = 0;
-var easing = 0.05;
 
-function setup() {
-  createCanvas(720, 400);
-  img = loadImage("assets:moonwalk.jpg");  // Load an image into the program
+
+function setup(){
+  createCanvas(500,500);
+  ellipseMode(RADIUS);
 }
 
-function draw() {
-  image(img, 0, 0);  // Display at full opacity
-  var dx = (mouseX-img.width/2) - offset;
-  offset += dx * easing;
-  tint(255, 127);  // Display at half opacity
-  image(img, offset, 0);
+function draw(){
+  var img='particles.jpg';
+  background(0);
+
+
+
+  x+= speed*direction;
+  if ((x>width-radius)|| (x<radius)) {
+    direction=-direction; //flip ndirectio
+  }
+  if (direction==1){
+    fill(255,255,0);
+    arc(x,60,radius,radius,0.52,5.76); //Face right
+  }else{
+    fill(255, 0, 0);
+    arc(x,60,radius,radius,3.67,8.9); //Face left
+  }
+
 }
