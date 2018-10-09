@@ -1,23 +1,18 @@
+var x=60;
 function setup() {
   createCanvas(500, 500);
-  background(204);
-  noStroke();
+ 
 }
 
 function draw() {
-
-  if(mouseIsPressed && mouseButton== LEFT && mouseX>90 && mouseX<150 && mouseY>30 && mouseY<90 ) {
-    fill(255, 0, 0);
-  } else {
-    fill(255);
-  }
-rect(90, 30, 60, 60);
-
-if(mouseIsPressed && mouseButton== LEFT && mouseY>30 && mouseY<90 && mouseX>330 && mouseX<390) {
-  fill(0, 255, 0);
-} else {
-  fill(255);
+background(204);
+fill(255,255,0);
+arc(x,60,radius,radius,0.52,5.76);
+if(keyIsPressed){
+  if(keyCode ==LEFT_ARROW){
+    x=x-5;
+  }else if(keyCode==RIGHT_ARROW){
+    x=x+5;
+  }
 }
-rect(330, 30, 60, 60);
-
 }

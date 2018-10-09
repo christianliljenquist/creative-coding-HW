@@ -11,9 +11,8 @@ function setup(){
 }
 
 function draw(){
-  background(0);
-
-
+  background(204);
+  vertex(50,100,50,50);
 
   x+= speed*direction;
   if ((x>width-radius)|| (x<radius)) {
