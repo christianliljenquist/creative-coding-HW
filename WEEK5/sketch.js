@@ -9,6 +9,10 @@ function draw() {
 background(0);
 fill(0,255,0);
 ellipse(500, 50, 50, 50);
+fill(0,255,0);
+ellipse(400, 50, 50, 50);
+fill(0,255,0);
+ellipse(300, 50, 50, 50);
 fill(255,255,0);
 arc(x,60,90,90,0.52,5.76);
 if(keyIsPressed){
@@ -18,4 +22,7 @@ if(keyIsPressed){
     x=x+5;
       }
     }
+
+
+
   }

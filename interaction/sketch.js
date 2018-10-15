@@ -12,7 +12,7 @@ function setup(){
 
 function draw(){
   background(204);
-  vertex(50,100,50,50);
+
 
   x+= speed*direction;
   if ((x>width-radius)|| (x<radius)) {
@@ -25,5 +25,6 @@ function draw(){
     fill(255, 0, 0);
     arc(x,60,radius,radius,3.67,8.9); //Face left
   }
+
 
 }
