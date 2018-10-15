@@ -1,3 +1,6 @@
+var img='party.jpg';
+
+
 function setup() {
   createCanvas(400, 400);
   textSize(50);
@@ -22,7 +25,7 @@ function draw() {
     line(100, 275, 300, 275);
   }
 
-  //black background its okay 
+  //black background its okay
   if(keyCode==UP_ARROW){
     background(0);
     stroke(255);
@@ -58,7 +61,7 @@ if(keyCode==LEFT_ARROW){
 }
 //happy that its over
 if(keyCode==RIGHT_ARROW){
-  background(200, 255, 0);
+  background('party.jpg');
   stroke(255);
   strokeWeight(8);
   noFill();
