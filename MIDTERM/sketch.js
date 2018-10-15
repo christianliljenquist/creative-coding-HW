@@ -1,5 +1,3 @@
-var img='party.jpg';
-
 
 function setup() {
   createCanvas(400, 400);
@@ -61,7 +59,7 @@ if(keyCode==LEFT_ARROW){
 }
 //happy that its over
 if(keyCode==RIGHT_ARROW){
-  background('party.jpg');
+  background(200, 255, 0);
   stroke(255);
   strokeWeight(8);
   noFill();
