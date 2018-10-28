@@ -1,6 +1,6 @@
 var radius=40;
 var x= 110;
-var speed=2.3;
+var speed=8;
 var direction=1;
 
 
