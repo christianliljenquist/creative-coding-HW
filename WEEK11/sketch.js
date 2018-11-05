@@ -1,26 +1,36 @@
-function setup () {
-  createCanvas (480, 240);
-  textSize(24);
-  textAlign(CENTER);
-  background(204);
-  var number = rollDice();
-  if(number == 1) {
-    fill(255, 0, 0);
-  } else if(number == 2) {
-    fill(0, 0, 255);
-  } else if(number == 3) {
-    fill(0, 255, 0);
-  } else {
-    fill(255, 0, 255);
-  }
-  rect(100, 10, 50, 50);
+  function Smiley(initX,initY,size){
+    this.x =initX;
+    this.y =initY;
+    this.size = size;
 
-  // text(face, 160, 60);
-  // face = rollDice();
-  // text(face, 320, 60)
+    this.smile = function(){
+      ellipse(this.x,this.y,this.size,this.size);
+      ellipse(this.x+this.size/4,this.y-this.size/4,10,10);
+      ellipse(this.x-this.size/4,this.y-this.size/4,10,10);
+      arc(this.x,this.y,this.x/2,this.y/2,60,120);
+    }
+  }
+
+var smiley1;
+
+function setup() {
+  createCanvas(480,240);
+  background(0,0,128);
+  angleMode(DEGREES);
+  smiley1 = new Smiley(width/2,height/2,80);
 }
 
-function rollDice() {
-  var number = 1+int(random(4));
-  return number;
+function draw(){
+  smiley1.smile();
 }
+
+
+
+
+
+
+
+
+
+
+//js stands for java script , set ups draw once while draw puts up 60 frames per second
