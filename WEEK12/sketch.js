@@ -50,7 +50,7 @@ function Firework() {
 }
 
 function setup() {
-  createCanvas(400, 300);
+  createCanvas(700, 700);
   gravity = createVector(0, 0.2);
   colorMode(HSB);
   stroke(255);
