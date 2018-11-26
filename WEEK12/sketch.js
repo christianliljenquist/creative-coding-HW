@@ -1,44 +1,126 @@
-function Moai(initX, initY, size){
+var fireworks = [];
+var gravity;
 
-  this.x = initX;
-  this.y = initY;
-  this.size = size;
-  this.build = function(){
-    fill(179, 179, 179);
-    rect(this.x, this.y, 75, 125);
-    fill(89, 89, 89);
-    ellipse(this.x+20, this.y+50, 20, 70);
-    ellipse(this.x+50, this.y+30, 20, 20);
-    triangle(this.x+75, this.y+75, this.x+95, this.y+75, this.x+75, this.y+30);
-    line(this.x+75, this.y+100, this.x+60, this.y+100);
+function Firework() {
+  this.hu = random(255);
+  this.firework = new Particle(random(width), height, this.hu, true);
+  this.exploded = false;
+  this.particles = [];
+
+
+  this.done = function() {
+    if (this.exploded && this.particles.length === 0){
+  return true;
+  }else {
+    return false;
+  }
+  }
+  this.update = function() { //firstUpdate
+    if (!this.exploded) {
+      this.firework.applyForce(gravity);
+      this.firework.update();
+      if (this.firework.vel.y >= 0) {
+        this.exploded = true;
+        this.explode();
+      }
+    }
+ for (var i = this.particles.length-1; i >= 0; i--) {
+      this.particles[i].applyForce(gravity);
+      this.particles[i].update();
+   if (this.particles[i].done()){
+     this.particles.splice(i, 1);
+   }
+    }
+  }
+
+  this.explode = function() {
+    for (var i = 0; i < 100; i++) {
+      var p = new Particle(this.firework.pos.x, this.firework.pos.y, this.hu, false);
+      this.particles.push(p);
+    }
+  }
+  this.show = function() {
+    if (!this.exploded) {
+      this.firework.show();
+    }
+    for (var i = this.particles.length-1; i >= 0; i--) {
+      this.particles[i].show();
+    }
   }
 }
 
-var field;
-var Moai1;
-var Moai2;
-var Moai3;
-var Moai4;
-var Moai5;
+function setup() {
+  createCanvas(400, 300);
+  gravity = createVector(0, 0.2);
+  colorMode(HSB);
+  stroke(255);
+  strokeWeight(4);
+  background(0);
 
-function preload(){
-  field = loadImage('field.jpg');
+
 }
 
-function setup(){
-  createCanvas(700, 600);
-  Moai1 = new Moai(50, 425);
-  Moai2 = new Moai(175, 400);
-  Moai3 = new Moai(300, 375);
-  Moai4 = new Moai(425, 350);
-  Moai5 = new Moai(550, 325);
+function draw() {
+  colorMode(RGB);
+  background(0, 0, 0, 25);
+  if (random(1) < 0.03) {
+    fireworks.push(new Firework());
+  }
+
+  for (var i = fireworks.length-1; i >= 0; i--) {
+    fireworks[i].update();
+    fireworks[i].show();
+    if (fireworks[i].done())
+      fireworks.splice(i, 1);
+  }
+
 }
-//
-function draw(){
-  image(field, 0, 0, 1000, 700);
-  Moai1.build();
-  Moai2.build();
-  Moai3.build();
-  Moai4.build();
-  Moai5.build();
+
+function Particle(x, y, hu, firework) {
+    this.pos = createVector(x, y);
+    this.firework = firework;
+    this.lifespan = 255;
+    this.hu = hu;
+
+  if (this.firework){
+   this.vel = createVector(0, random(-12, -8));
+ }else {
+   this.vel = p5.Vector.random2D();
+   this.vel.mult(random(2, 10));
+ }
+
+  this.acc = createVector(0, 0);
+
+  this.applyForce = function(force) {
+    this.acc.add(force);
+  }
+
+  this.update = function() { //second update
+    if (!this.firework) {
+      this.vel.mult(0.9);
+      this.lifespan -= 4;
+    }
+    this.vel.add(this.acc);
+    this.pos.add(this.vel);
+    this.acc.mult(0);
+  }
+  this.done = function(){
+    if(this.lifespan < 0){
+      return true;
+    }else {
+      return false;
+    }
+  }
+  this.show = function() {
+   colorMode(HSB);
+    if (!this.firework) {
+     strokeWeight(2);
+     stroke(hu, 255, 255, this.lifespan);
+   }else {
+     strokeWeight(4);
+     stroke(hu, 255, 255);
+   }
+    point(this.pos.x, this.pos.y);
+
+  }
 }
