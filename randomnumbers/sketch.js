@@ -1,26 +1,59 @@
-function setup () {
-  createCanvas (480, 240);
-  textSize(24);
-  textAlign(CENTER);
-  background(204);
-  var number = rollDice();
-  if(number == 1) {
-    fill(255, 0, 0);
-  } else if(number == 2) {
-    fill(0, 0, 255);
-  } else if(number == 3) {
-    fill(0, 255, 0);
-  } else {
-    fill(255, 0, 255);
-  }
-  rect(100, 10, 50, 50);
+var tblyllw;
+var tblblue;
+var yellow;
+var blue;
+var platey;
+var plateb;
+var napkiny;
+var napkinb;
+var forky;
+var forkb;
+var knifey;
+var knifeb;
+var milky;
+var milkb;
+var spoony;
+var spoonb;
+var coffeey;
+var coffeeb;
+var bfy;
+var bfb;
 
-  // text(face, 160, 60);
-  // face = rollDice();
-  // text(face, 320, 60)
+
+
+function preload() {
+  tblyllw = loadImage('tblyllw.png');
+  tblblue = loadImage('tblblue.png');
+  yellow = loadImage ('yellow.png');
+  blue = loadImage ('blue.png');
+  platey = loadImage ('plate.y.png');
+  plateb = loadImage ('plate.b.png');
+  napkiny = loadImage ('napkin.y.png');
+  napkinb = loadImage ('napkin.b.png');
+  forky = loadImage ('fork.y.png');
+  forkb = loadImage ('fork.b.png');
+  knifey = loadImage ('knife.y.png');
+  knifeb = loadImage ('knife.b.png');
+  milky = loadImage ('milk.y.png');
+  milkb = loadImage ('milk.b.png');
+  spoony = loadImage ('spoon.y.png');
+  spoonb = loadImage ('spoon.b.png');
+  coffeey = loadImage ('coffee.y.png');
+  coffeeb = loadImage ('coffee.b.png');
+  bfy = loadImage ('bf.y.png');
+  bfb = loadImage ('bf.b.png');
 }
 
-function rollDice() {
-  var number = 1+int(random(4));
-  return number;
+
+function setup() {
+  createCanvas(800, 700);
+}
+
+function draw () {
+  image (yellow, 0, 0, 800, 400);
+btn=createButton('Eggs and Toast?');
+btn.position(100,50);
+btn=createButton('Waffles?');
+btn.position(100,100);
+
 }
