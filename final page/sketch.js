@@ -1,37 +1,17 @@
-var x = 25;
-var h = 20;
-var y = 25;
-
-function setup(){
-  createCanvas(1200,400);
-}
-
-function draw (){
-  background(204);
-  x=20;
-  rect(x,y,100,h);
-  x=x+100;
-  rect(x,y+h,100,h);
-  x=x+100;
-  rect(x,y+h*2,100,h);
-  x=x+100;
-  rect(x,y+h*3,100,h);
-  x=x+100;
-  rect(x,y+h*4,100,h);
-  x=x+100;
-  rect(x,y+h*5,100,h);
-  x=x+100;
-  rect(x,y+h*6,100,h);
-  x=x+100;
-  rect(x,y+h*7,100,h);
-  x=x+100;
-  rect(x,y+h*8.100,h);
-  x=x+100;
-  rect(x,y+h*9,100,h);
-  x=x+100;
-  rect(x,y+h*10,100,h);
-  x=x+100;
-  rect(x,y+h*11,100,h);
-  x=x+100;
-  rect(x,y+h*12,100,h);
-}
+if(keyCode==RIGHT_ARROW){
+  background(200, 255, 0);
+  stroke(255);
+  strokeWeight(8);
+  noFill();
+  ellipse(150, 150, 40, 40);
+  ellipse(250, 150, 40, 40);
+  if (mouseIsPressed) {
+    arc(200,300,200,180,360,180);
+    fill(102, 255, 102);
+    text('WOOOHOOO',20,50,400);
+    fill(255,0,0);
+    text('YAY',50,200,20);
+  }
+  else {
+    line(100, 275, 300, 275);
+  }
