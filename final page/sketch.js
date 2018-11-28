@@ -1,3 +1,22 @@
+
+
+
+
+function setup() {
+  createCanvas(400, 400);
+  textSize(50);
+  textAlign(CENTER);
+  angleMode(DEGREES);
+}
+//how i felt when i heard we had a project
+function draw() {
+  background(255,0,0);
+  stroke(255);
+  strokeWeight(8);
+  noFill();
+  ellipse(150, 150, 40, 40);
+  ellipse(250, 150, 40, 40);
+}
 if(keyCode==RIGHT_ARROW){
   background(200, 255, 0);
   stroke(255);
@@ -15,3 +34,6 @@ if(keyCode==RIGHT_ARROW){
   else {
     line(100, 275, 300, 275);
   }
+}
+
+}
