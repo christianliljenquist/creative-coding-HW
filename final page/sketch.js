@@ -1,7 +1,7 @@
 var img;
 
 function preload(){
-img = loadImage('fire.png');
+img = loadImage("fire.png");
 }
 
 function setup() {
