@@ -1,6 +1,8 @@
+var img;
 
-
-
+function preload(){
+img = loadImage('fire.png');
+}
 
 function setup() {
   createCanvas(800, 800);
@@ -10,10 +12,11 @@ function setup() {
 }
 //how i felt when i heard we had a project
 function draw() {
-  background(220,0,0);
+  
   stroke(255);
-  strokeWeight(8);
+  strokeWeight(2);
   noFill();
   text('WOOOHOOO',20,50,400);
-  text('1st Place!!', 20,100,400);
+image(img,o,o);
+  text('1st Place!!', 100,500,300);
 }

@@ -9,5 +9,5 @@ function setup(){
 }
 
 function draw();
-image(img,0,0);
+image(image,0,0);
 }
