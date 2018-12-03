@@ -12,7 +12,7 @@ function setup() {
 }
 //how i felt when i heard we had a project
 function draw() {
-  
+
   stroke(255);
   strokeWeight(2);
   noFill();
