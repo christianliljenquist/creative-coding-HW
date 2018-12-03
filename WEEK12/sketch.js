@@ -1,13 +1,10 @@
-var img;
-
-function preload(){
-  img=loadImage("fire.jpg");
-}
+var button;
 
 function setup(){
-  createCanvas (480,120);
+  createCanvas(240,240);
+  background(205);
 }
 
-function draw();
-image(image,0,0);
+button=createButton('1st Question');
+button.position(200,200);
 }

@@ -1,28 +1,28 @@
-var x=60;
-var y=40;
 function setup() {
-  createCanvas(720, 400);
- 
+  createCanvas(400, 400);
+  textSize(50);
+  textAlign(CENTER);
+  angleMode(DEGREES);
 }
 
 function draw() {
-background(0);
-fill(0,255,0);
-ellipse(500, 50, 50, 50);
-fill(0,255,0);
-ellipse(400, 50, 50, 50);
-fill(0,255,0);
-ellipse(300, 50, 50, 50);
-fill(255,255,0);
-arc(x,60,90,90,0.52,5.76);
-if(keyIsPressed){
-  if(keyCode ==LEFT_ARROW){
-    x=x-5;
-  }else if(keyCode==RIGHT_ARROW){
-    x=x+5;
-      }
-    }
+  background(255,0,0);
+  stroke(255);
+  strokeWeight(8);
+  noFill();
+}
 
-
-
+if(keyCode==RIGHT_ARROW){
+  background(200, 255, 0);
+  stroke(255);
+  strokeWeight(8);
+  noFill();
+  ellipse(150, 150, 40, 40);
+  ellipse(250, 150, 40, 40);
+  if (mouseIsPressed) {
+    arc(200,300,200,180,360,180);
+    fill(102, 255, 102);
+    text('WOOOHOOO',20,50,400);
+    fill(255,0,0);
+    text('YAY',50,200,20);
   }
